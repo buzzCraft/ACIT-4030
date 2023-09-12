@@ -9,6 +9,7 @@ Download here
 
 The dataset is loaded using:
 
+```python
 import numpy as np
 data = np.load("modelnet10.npz", allow_pickle=True)
 train_voxel = data["train_voxel"] # Training 3D voxel samples
@@ -16,14 +17,17 @@ test_voxel = data["test_voxel"] # Test 3D voxel samples
 train_labels = data["train_labels"] # Training labels (integers from 0 to 9)
 test_labels = data["test_labels"] # Test labels (integers from 0 to 9)
 class_map = data["class_map"] # Dictionary mapping the labels to their class names.
+```
 
 Visualizing a 3D voxel model can be done in matplotlib.pyplot like this:
 
+```python
 import matplotlib.pyplot as plt
 ax = plt.figure().add_subplot(projection='3d')
 index = <index to your model>
 ax.voxels(<your voxel map,like train_voxel>[index])
 plt.show()
+```
 
 Task A - Training the discriminator and generator
 
@@ -46,8 +50,10 @@ The submission
 
 A report and source code must be submitted that address all task requests of Task A and Task B. The report should not exceed 10 pages. Source code must have descriptive comments. Parts of open-source code from websites must be cited with source link, such as shown below:
 
+```python
 def function_from_web():
     # Function code from: [link]
     # or
     # Function code based on: [link]
     return
+```
